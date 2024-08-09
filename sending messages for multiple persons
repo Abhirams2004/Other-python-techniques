@@ -1,0 +1,31 @@
+import pyautogui as gui
+import time
+
+def focus_on_contact(contact_name):
+    """
+    Function to focus on a contact's chat window.
+    This is a placeholder function. You need to replace this
+    with specific code to select or focus on the contact in your messaging application.
+    """
+    print(f"Focusing on contact: {contact_name}")
+    # Implement the logic to focus on the contact's chat window.
+    # For example, you might need to click on the contact's name in the UI
+    # gui.click(x, y)  # Coordinates for the contact's chat window
+    # Or use keyboard shortcuts to navigate to the contact's chat window
+
+# Get user input
+message = input("Enter the message: ")
+number = int(input("Enter the number of times to send the message: "))
+contact_name = input("Enter the contact name or identifier: ")
+
+print("You have 4 seconds to switch to the messaging application...")
+time.sleep(4)
+
+# Focus on the contact's chat window
+focus_on_contact(contact_name)
+
+# Send the message to the contact
+for _ in range(number):
+    gui.typewrite(message)
+    gui.press('Enter')
+    time.sleep(0.5)  # Short delay between messages
